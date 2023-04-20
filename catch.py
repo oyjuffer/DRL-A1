@@ -53,23 +53,23 @@ def get_num_actions(self):
     return 3
 
 def reset(self):
-    return self.reset_random ()
+    return self.reset_random()
 
 def state_shape(self):
-    return ( self . fps ,) + self . output_shape
+    return ( self.fps ,) + self.output_shape
 
-def run_environment ():
-    env = CatchEnv ()
+def run_environment():
+    env = CatchEnv()
     number_of_episodes = 1
-    for ep in range ( number_of_episodes ): 
-        env = reset ()
-        state , reward , terminal = env . step ( random . randint (0 , 2))
+    for ep in range(number_of_episodes): 
+        env = reset()
+        state , reward , terminal = env.step(random.randint(0 , 2))
         
-        while not terminal :
-            state , reward , terminal = env . step ( random . randint (0 , 2))
-            print (" Reward obtained by the agent : {}". format ( reward ))
-            state = np . squeeze ( state )
-    print (" End of the episode ")
+        while not terminal:
+            state , reward , terminal = env.step(random.randint(0 , 2))
+            print (" Reward obtained by the agent : {}".format( reward ))
+            state = np.squeeze( state )
+    print(" End of the episode ")
 
 if __name__ == " __main__ ":
-    run_environment ()
+    run_environment()
