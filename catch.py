@@ -4,11 +4,11 @@ import numpy as np
 
 class CatchEnv ():
     def __init__(self):
-    self.size = 21
-    self.image = np.zeros((self.size , self.size))
-    self.state = []
-    self.fps = 4
-    self.output_shape = (84 , 84)
+        self.size = 21
+        self.image = np.zeros((self.size , self.size))
+        self.state = []
+        self.fps = 4
+        self.output_shape = (84 , 84)
     
 def reset_random(self):
     self.image.fill(0)
@@ -23,10 +23,10 @@ def reset_random(self):
 def step(self , action):
     def left():
         if self.pos > 3:
-        self.pos -= 2
+            self.pos -= 2
     def right():
         if self.pos < 17:
-        self.pos += 2
+            self.pos += 2
     def noop():
         pass
     {0: left , 1: right , 2: noop}[action]()
